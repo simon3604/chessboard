@@ -81,5 +81,17 @@ void lightPieces(std::bitset<81>& leds) {
 
 
 
-
-
+void testLeds() {
+    for (int i = 0; i < 64; i++)
+    {
+        for (int j = 0; j < 4; j++)
+        {
+            if (i != 0) {
+                setLed(squareMap[i - 1].leds[j].chip, squareMap[i - 1].leds[j].row, squareMap[i - 1].leds[j].col, false);
+            }
+            
+            setLed(squareMap[i].leds[j].chip, squareMap[i].leds[j].row, squareMap[i].leds[j].col, true);
+        }
+        delay(300);
+    }
+}

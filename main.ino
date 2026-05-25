@@ -43,11 +43,5 @@ void loop()
     // if (settings.lightPieces) {
     //     lightPieces(std::bitset<81>(board));
     // }
-    for (int i = 0; i < 64; i++)
-    {
-        for (int j = 0; j < 4; j++)
-        {
-            setLed(squareMap[i].leds[j].chip, squareMap[i].leds[j].row, squareMap[i].leds[j].col, true);
-        }
-    }
+    testLeds();
 }
