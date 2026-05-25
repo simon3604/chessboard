@@ -1,6 +1,7 @@
 #include "display.h"
 #include <bitset>
 #include "constants.h"
+#include <SPI.h>
 
 
 Led mapLed(int r, int c) {
